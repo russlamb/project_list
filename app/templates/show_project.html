@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Project {{ project.name }}</h1>
+    <table class="w3-table">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Is Live?</th>
+            <th>ID</th>
+        </tr>
+        <tr>
+            <td>{{ project.name }}</td>
+            <td>{{ project.description }}</td>
+            <td>{{ project.is_live }}</td>
+            <td>{{ project.id }}</td>
+        </tr>
+    </table>
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <p>{{ form.delete() }}</p>
+    </form>
+{% endblock %}
